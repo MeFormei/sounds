@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <style type="text/css">
+  	audio{
+  		display: none;
+  	}  	
+  </style>>
+</head>
+
+<body>
+	<audio id="audio" preload="auto" autoplay="true">
+		<source id="mp3Source" src="footstep09.ogg"></source>
+	</audio>>
+  <script>
+  	function updateSource(sound) { 
+        var audio = document.getElementById('audio');
+
+        var source = document.getElementById('mp3Source');
+        source.src = sound;
+
+        audio.load(); //call this to just preload the audio without playing
+        audio.play(); //call this to play the song right away
+    }
+
+  </script>
+</body>
+</html>
